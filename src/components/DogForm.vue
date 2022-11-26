@@ -85,11 +85,9 @@ export default {
 					if (response.message != undefined) {
 						window.location.href = '/';
 					} else {
-						console.log(response.message)
 						this.errors = response;
 					}
 				})
-				.catch(console.log)
 		}
 	},
 	mounted() {
