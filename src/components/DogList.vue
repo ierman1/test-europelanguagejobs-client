@@ -1,6 +1,6 @@
 <template>
 
-	<div class="list">
+	<div class="d-flex flex-wrap">
 		<DogListItem v-for="dog in dogs" v-bind:key="dog.id" :dog="dog" />
 	</div>
 
@@ -29,8 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-	.list {
-		display: flex;
-		flex-wrap: wrap;
-	}
+
 </style>

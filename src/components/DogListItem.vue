@@ -1,8 +1,13 @@
 <template>
-	<div class="dog">
-		<img :src="'http://192.168.1.53:8000' + dog.filePath" alt="">
-		<p>{{ dog.name }}</p>
-		<router-link :to="'/dogs/' + dog.id">Visit page</router-link>
+	<div class="col-3 p-3">
+		<div class="card">
+			<div class="card-body p-0">
+				<img :src="'http://192.168.1.53:8000' + dog.filePath" alt="">
+			</div>
+			<div class="card-footer">
+				<p class="fw-bold text-center"><router-link :to="'/dogs/' + dog.id">{{ dog.name }}</router-link></p>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -16,11 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-	.dog {
-		margin: 20px;
-
-		img {
-			height: 100px;
-		}
+	img {
+		max-width: 100%;
 	}
 </style>

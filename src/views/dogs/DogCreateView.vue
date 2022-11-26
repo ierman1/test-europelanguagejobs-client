@@ -1,5 +1,7 @@
 <template>
-	<DogForm />
+	<div class="my-5 col-6 offset-3">
+		<DogForm />
+	</div>
 </template>
 
 <script>
