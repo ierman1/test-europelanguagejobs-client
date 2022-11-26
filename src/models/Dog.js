@@ -16,6 +16,17 @@ Dog.fromObject = (object) => {
     return null;
 }
 
+Dog.create = (breedId, name, hairColor, size) => {
+    const data = new FormData();
+
+    data.append('breed_id', breedId);
+    data.append('name', name);
+    data.append('hair_color', hairColor);
+    data.append('size', size);
+
+    return Api.fetch('/dogs', data, 'post')
+}
+
 Dog.fetch = () => {
     return Api.fetch('/dogs');
 }
