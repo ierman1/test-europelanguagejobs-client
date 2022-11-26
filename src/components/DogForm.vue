@@ -5,6 +5,7 @@
 		Small <input type="radio" v-model="size" value="small">
 		Medium <input type="radio" v-model="size" value="medium">
 		Large <input type="radio" v-model="size" value="large"><br>
+		<input type="file" @input="e => this.file = e.target.files[0]"><br>
 		<select v-model="breed">
 			<option v-for="breed in breeds" v-bind:key="breed.id" :value="breed.id">{{ breed.name }}</option>
 		</select>
@@ -25,12 +26,17 @@ export default {
 			hairColor: '',
 			size: '',
 			breed: '',
+			file: null,
 			breeds: []
 		}
 	},
 	methods: {
 		handleSubmit() {
-			Dog.create(this.breed, this.name, this.hairColor, this.size).then(console.log)
+			Dog.create(this.breed, this.name, this.hairColor, this.size, this.file)
+				.then(() => {
+					window.location.href = '/';
+				})
+				.catch(console.log)
 		}
 	},
 	mounted() {
