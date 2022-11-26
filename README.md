@@ -1,4 +1,5 @@
-# test-europelanguagejobs-client
+# Test Europe Language Jobs
+## Client
 
 ## Project setup
 ```
@@ -15,15 +16,10 @@ npm run serve
 npm run build
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
+### Instrucciones
+Es necesario cambiar la dirección del servidor en:
+- src/Api.js (const BASE_URL)
+- src/components/DogSingle.vue (en la imagen)
+- src/components/DogListItem.vue (en la imagen)
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+La API se encuentra [aquí](https://github.com/ierman1/test-europelanguagejobs-api).
