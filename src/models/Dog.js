@@ -17,13 +17,11 @@ Dog.fromObject = (object) => {
 }
 
 Dog.fetch = () => {
-    return Api.fetch('/dogs')
-        .then((response) => response.json());
+    return Api.fetch('/dogs');
 }
 
 Dog.find = (id) => {
-    return Api.fetch('/dogs/' + id)
-        .then((response) => response.json());
+    return Api.fetch('/dogs/' + id);
 }
 
 export default Dog;

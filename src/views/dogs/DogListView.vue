@@ -1,15 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+	<div>
+		<router-link to="/dogs/create">Add another dog</router-link>
+		<DogList />
+	</div>
 </template>
 
 <script>
-// @ is an alias to /src
+import DogList from "@/components/DogList";
 
 export default {
-  name: 'DogListView',
-  components: {
-  }
+	name: 'DogListView',
+	components: {
+		DogList
+	}
 }
 </script>

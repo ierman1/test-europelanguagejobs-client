@@ -13,8 +13,7 @@ Breed.fromObject = (object) => {
 }
 
 Breed.fetch = () => {
-    return Api.fetch('/breeds')
-        .then((response) => response.json());
+    return Api.fetch('/breeds');
 }
 
 export default Breed;
